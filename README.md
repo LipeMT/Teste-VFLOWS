@@ -32,11 +32,14 @@ Este projeto é um sistema de cadastro de fornecedores e produtos desenvolvido p
    git clone https://github.com/usuario/projeto-cadastro-fornecedores.git
 
 2. Navegue até o diretório do projeto:
+    ```bash
     $ cd projeto-cadastro-fornecedores
 
 3. Com o node instalado na máquina, execute o comando no terminal:
+    ```bash
     $ npm install
 
 4. Execute o seguinte comando para rodar o projeto:
+    ```bash
     $ npm run dev
 
