@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de fornecedor/produto - Vflows</title>
+    <link rel="stylesheet" type="text/css" href="/style-guide/css/fluig-style-guide.min.css">
+    
+    <script src="https://style.fluig.com/js/fluig-style-guide-docs-index.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="module" src="./src/scripts/main.js" defer></script>
+</head>
+
+<body>
+    <main class="fluig-style-guide">
+        <h1 class="text-center text-uppercase">Cadastro de fornecedor/produto</h1>
+        <form id="formSupplier" class="fs-lg-margin-horizontal">
+
+            <section id="supplier-data"
+                class="fs-display-flex fs-align-items-center fs-justify-content-center fs-lg-margin-bottom fs-full-width fs-md-padding">
+                <div
+                    class="fs-max-width-900 fs-display-flex fs-flex-direction-column fs-align-items-center fs-border fs-border-radius fs-full-width">
+                    <legend class="fs-bg-info fs-color-white fs-md-padding-left">
+                        Dados do Fornecedor
+                    </legend>
+
+                    <div class="form-group fs-display-flex fs-full-width">
+
+                        <div class="col-xs-7">
+                            <label for="name">Razão Social *</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+
+                        <div class="col-xs-5">
+                            <label for="doc">CNPJ *</label>
+                            <input type="number" class="form-control fs-no-spin" id="doc" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group fs-display-flex fs-full-width">
+
+                        <div class="col-xs-7">
+                            <label for="lastName">Nome Fantasia *</label>
+                            <input type="text" class="form-control" id="lastName" required="">
+                        </div>
+
+                        <div class="col-xs-5">
+                            <label for="stateDoc">Inscrição Estadual</label>
+                            <input type="text" class="form-control" id="stateDoc">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group fs-display-flex fs-full-width">
+
+                        <div class="col-xs-6">
+                            <label for="postalCode">CEP *</label>
+                            <input type="number" class="form-control fs-no-spin" id="postalCode" required>
+                        </div>
+
+                        <div class="col-md-offset-2 col-xs-6">
+                            <label for="cityDoc">Inscrição Municipal</label>
+                            <input type="number" class="form-control fs-no-spin" id="cityDoc">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group fs-display-flex fs-full-width">
+
+                        <div class="col-xs-7">
+                            <label for="address">Endereço *</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+
+                        <div class="col-xs-5">
+                            <label for="number">Número</label>
+                            <input type="number" class="form-control fs-no-spin" id="number">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group col-xs-12 fs-full-width">
+                        <label for="complement">Complemento</label>
+                        <input type="text" class="form-control" id="complement">
+                    </div>
+
+                    <div class="form-group fs-display-flex fs-full-width">
+
+                        <div class="col-xs-4">
+                            <label for="neighborhood">Bairro *</label>
+                            <input type="text" class="form-control" id="neighborhood" required>
+                        </div>
+
+                        <div class="col-xs-4">
+                            <label for="city">Município *</label>
+                            <input type="text" class="form-control" id="city" required>
+                        </div>
+
+                        <div class="col-xs-4">
+                            <label for="state">Estado *</label>
+                            <input type="text" class="form-control" id="state" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group fs-display-flex fs-full-width">
+                        <div class="col-xs-4">
+                            <label for="contactName">Nome da Pessoa de Contato *</label>
+                            <input type="text" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="col-xs-4">
+                            <label for="phoneNumber">Telefone *</label>
+                            <input type="tel" class="form-control" id="phoneNumber" required>
+                        </div>
+                        <div class="col-xs-4">
+                            <label for="email">E-mail *</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="products"
+                class="fs-display-flex fs-align-items-center fs-justify-content-center fs-lg-margin-bottom fs-md-padding">
+                <div
+                    class="fs-max-width-900 fs-display-flex fs-flex-direction-column fs-align-items-center fs-border fs-border-radius fs-full-width">
+
+                    <legend class="fs-bg-info fs-color-white fs-md-padding-left">
+                        Produtos
+                    </legend>
+
+                    <article id="productsRegister">                                            
+                    </article>
+
+                    <div class="fs-full-width fs-lg-padding-horizontal">
+
+                        <button type="button" id="addProduct" class="btn btn-success fs-font-bold fs-lg-margin-bottom fs-full-width">
+                            Adicionar Produto
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="attachments"
+                class="fs-display-flex fs-align-items-center fs-justify-content-center fs-lg-margin-bottom fs-full-width fs-md-padding">
+                <div class="fs-max-width-900 fs-full-width fs-border fs-border-radius">
+                    <legend class="fs-bg-info fs-color-white fs-md-padding-left">
+                        Anexos
+                    </legend>
+                    <legend class="text-left fs-md-padding-left fs-color-black fs-position-sticky">
+                        Itens
+                    </legend>                        
+                    <div id="documentRegister"
+                        class="fs-height-200 fs-overflow-y-auto fs-border fs-border-radius fs-md-margin-horizontal fs-lg-margin-bottom">
+                    </div>
+                    <div
+                        class="fs-display-flex fs-align-items-center fs-justify-content-center fs-lg-padding-horizontal">
+                        <label for="add-document"
+                            class="btn btn-success fs-width-800 text-center fs-font-bold fs-lg-margin-bottom fs-full-width">Anexar
+                            um
+                            arquivo</label>
+
+                        <input type="file" id="add-document" class="fs-display-none"
+                            accept=".pdf, .doc, .docx, .png, .jpg, .jpeg">
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section id="submit"
+                class="fs-display-flex fs-align-items-center fs-justify-content-center fs-lg-margin-bottom fs-full-width fs-md-padding">
+                <div class="fs-max-width-900 fs-full-width">
+                <button class="btn btn-success fs-font-bold fs-lg-margin-bottom fs-full-width" id="saveData" type="submit">
+                    Salvar Fornecedor
+                </button>
+                </div>
+            </section>
+        </form>
+    </main>
+  </div>
+</body>
+
+</html>
